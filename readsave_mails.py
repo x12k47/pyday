@@ -3,11 +3,11 @@ import html2text
 from email import message_from_bytes
 
 # Reemplaza con tus credenciales de correo
-email_address = 'scotiapython@outlook.com'
-email_password = 'computador123'
+email_address = 'correo'
+email_password = 'contraseña'
 
 # Conectar al servidor de correo
-with IMAPClient(host='outlook.office365.com') as client:
+with IMAPClient(host='servidor_correo') as client:
     client.login(email_address, email_password)
     client.select_folder('INBOX')
 
