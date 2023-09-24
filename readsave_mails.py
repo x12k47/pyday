@@ -2,7 +2,7 @@ from imapclient import IMAPClient
 import html2text
 from email import message_from_bytes
 
-# Reemplaza con tus credenciales de correo
+# Reemplazar con credenciales de correo
 email_address = 'correo'
 email_password = 'contraseña'
 
@@ -24,7 +24,7 @@ with IMAPClient(host='servidor_correo') as client:
             Asunto = envelope.subject.decode()
             Timestamp = envelope.date.strftime('%d/%m/%Y %H:%M:%S')  # Formatear la fecha y hora
 
-            # Aquí obtienes el cuerpo del correo
+            # Se obtiene el cuerpo del correo
             if b'BODY[]' in data:
                 raw_message = data[b'BODY[]']
                 email_message = message_from_bytes(raw_message)
